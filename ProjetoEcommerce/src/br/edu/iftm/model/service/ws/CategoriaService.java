@@ -1,4 +1,4 @@
-package br.edu.iftm.model.service;
+package br.edu.iftm.model.service.ws;
 
 import java.util.List;
 
@@ -9,6 +9,7 @@ import javax.jws.WebService;
 
 import br.edu.iftm.model.dao.CategoriaDAO;
 import br.edu.iftm.model.domain.Categoria;
+import br.edu.iftm.model.service.ICategoriaService;
 
 @WebService(serviceName="ws/categoria")
 public class CategoriaService implements ICategoriaService {
