@@ -5,8 +5,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -20,9 +18,9 @@ public class Produto {
 	@Column(name="NM_PRODUTO")
 	private String nome;
 	
-	@ManyToOne
+	/*@ManyToOne
 	@JoinColumn(name="CD_CATEGORIA", referencedColumnName="CD_CATEGORIA")
-	private Categoria categoria;
+	private Categoria categoria;*/
 	
 	@Column(name="VL_PRECO")
 	private Double preco;

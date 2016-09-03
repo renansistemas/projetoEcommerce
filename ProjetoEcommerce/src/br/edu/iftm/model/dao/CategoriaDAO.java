@@ -2,6 +2,7 @@ package br.edu.iftm.model.dao;
 
 import java.util.List;
 
+import javax.enterprise.inject.Model;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
@@ -9,15 +10,16 @@ import javax.transaction.Transactional;
 
 import br.edu.iftm.model.domain.Categoria;
 
+@Model
 public class CategoriaDAO {
 	
 	@PersistenceContext(unitName="ProjetoEcommerce")
 	private EntityManager entityManager;
 	
 	@Transactional
-	public void salvar(Categoria categoria) {
-		Categoria merge = entityManager.merge(categoria);
-		entityManager.persist(merge);
+	public Categoria salvar(Categoria categoria) {
+		entityManager.persist(categoria);
+		return categoria;
 	}
 	
 	@Transactional
