@@ -1,10 +1,10 @@
-package br.edu.iftm.model.service;
+package br.edu.iftm.model.dao;
 
 import java.util.List;
 
 import br.edu.iftm.model.domain.Categoria;
 
-public interface ICategoriaService {
+public interface ICategoriaDao {
 
 	void salvar(Categoria categoria);
 
@@ -13,7 +13,7 @@ public interface ICategoriaService {
 	void excluir(Integer codigo);
 
 	List<Categoria> buscar(Categoria categoria);
-	
-	public Categoria buscarPorId(Integer codigo);
+
+	Categoria buscarPorId(Integer id);
 
 }

@@ -31,14 +31,20 @@ public class CategoriaService implements ICategoriaService {
 	
 	@Override
 	@WebMethod
-	public void excluir(@WebParam(name="categoria") Categoria categoria) {
-		categoriaDAO.excluir(categoria);
+	public void excluir(@WebParam(name="codigo") Integer codigo) {
+		categoriaDAO.excluir(codigo);
 	}
 	
 	@Override
 	@WebMethod
 	public List<Categoria> buscar(@WebParam(name="categoria") Categoria categoria) {
 		return categoriaDAO.buscar(categoria);
+	}
+	
+	@Override
+	@WebMethod
+	public Categoria buscarPorId(@WebParam(name="idCategoria") Integer codigo) {
+		return categoriaDAO.buscarPorId(codigo);
 	}
 
 }
